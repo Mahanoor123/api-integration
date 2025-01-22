@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    font-family: sans-serif;
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+.products_card h1{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+.cards_display{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.cards_display .single_card{
+    background-color: #fff;
+    box-shadow: 2px 2px 4px 1px #ccc;
+    border-radius: 0.5rem;
+    transition: transform 0.4s linear;
+
+    &:hover{
+        transform: translateY(-0.5rem);
+    }
+}
+.single_card .card_image{
+    background-color: rgba(0, 176, 62, 0.127);
+}
+.card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.single_card .card_content{
+    padding: 0.5rem;
+}
+.single_card .card_content h2{
+    color: rgb(210, 57, 30);
+    font-size: 1rem;
+}
+.single_card .card_content small{
+    color: #5e5e5e;
+}
+.single_card .card_content p{
+    color: rgb(0, 176, 61);
+}
+.card_btn{
+    all: unset;
+    margin-top: 1rem;
+    background-color: rgb(210, 57, 30);
+    padding: 0.4rem 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.4s linear;
+
+    &:hover{
+        background: rgb(0, 176, 61);
+    }
+}
+
+/* Card recipe details */
+.card_details{
+    background-color: #fff;
+    width: 90vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.card_details .card_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_details .card_head .card_title{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.card_details .card_head .card_links i{
+    padding: 0 0.4rem;
+    color: rgb(210, 57, 30);
+    font-size: 1.2rem;
+}
+.card_details .recipe_card_info{
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.1rem solid #ccc;
+}
+.recipe_card_info .recipe_chef, .recipe_cal , .recipe_comment{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.recipe_card_info span{
+    color: #5e5e5e;
+    padding-left: 0.4rem;
+}
+.recipe_card_info i{
+    color: rgb(210, 57, 30);
+}
+.recipe_info{
+    padding: 0.5rem 0;
+    width: 80%;
+    font-size: 0.9rem;
+    color: #5e5e5e;
+}
+.recipe_image{
+    background-color: rgba(0, 176, 62, 0.127);
+    border: 1px solid rgb(0, 176, 61);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.recipe_image img{
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+    object-position: center;
+}
+.recipe_card_extrainfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.recipe_card_extrainfo .recipe_serving, .recipe_cooktime{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.recipe_card_extrainfo span{
+    color: #5e5e5e;
+    padding-left: 0.4rem;
+}
+.recipe_card_extrainfo i{
+    color: rgb(210, 57, 30);
+}
+.card_recipe_detail{
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.card_recipe_detail h4{
+    font-size: 2.2rem;
+}
+.card_recipe_detail .card_ingredients ul, ol{
+    margin: 1rem 0;
+}
+.card_recipe_detail li{
+    padding: 0.5rem 0;
+    color: #414141;
+    list-style-position: inside;
+}
+.card_recipe_detail ol li::marker{
+    color: rgb(210, 57, 30);
+    font-weight: 600;
+}
